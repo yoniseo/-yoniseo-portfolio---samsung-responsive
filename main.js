@@ -117,16 +117,12 @@ $(window).on('load', function(){
     adaptiveHeight: true,
     infinite: false,
     customPaging:function(slider, i){
-      if (i=='0'){
-        i = '새로운 갤럭시';
-      }else if(i=='1'){
-        i = '특별한 혜택';
-      }else if(i=='2'){
-        i = '추천 제품';
-      }else if(i=='3'){
-        i = '가족과 함께';
-      }else if(i=='4'){
-        i = '특별한 한 해';
+      switch(i){
+        case 0: i = '새로운 갤럭시';break;
+        case 1: i = '특별한 혜택';break;
+        case 2: i = '추천 제품';break;
+        case 3: i = '가족과 함께';break;
+        case 4: i = '특별한 한 해';
       }
       return '<span class="dot">'+i+'</span>';
     },
